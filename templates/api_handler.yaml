@@ -7,7 +7,7 @@ publish_templates:
     - '%(attr)s;%(metric_name)s'
 counters:
   MESSAGE_ID: {}
-  JOURNAL_ERROR_STATUS: {}
-  JOURNAL_REQUEST_METHOD: {}
+  REQUEST_METHOD: {}
+  RESPONSE_CODE: {}
 histograms:
   REQUEST_PROCESS_TIME: {}
