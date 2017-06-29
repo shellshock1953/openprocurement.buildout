@@ -12,7 +12,7 @@ handlers:
     level: INFO
     formatter: simple
     stream: ext://sys.stdout
-{% if 'statsd' in parts['auction_worker_defaults.json'] %}\ 
+{% if 'statsd' in parts['penstock.yaml'] %}\ 
   statsd:
     level: DEBUG
     class: statsdhandler.StatsdHandler
@@ -20,7 +20,7 @@ handlers:
 {% endif %}
 loggers:
   replichecker:
-    handlers: [console{% if 'statsd' in parts['auction_worker_defaults.json'] %},statsd{% endif %}]
+    handlers: [console{% if 'statsd' in parts['penstock.yaml'] %},statsd{% endif %}]
     propagate: no
     level: INFO
 
