@@ -20,7 +20,7 @@ handlers:
 {% endif %}
 loggers:
   replichecker:
-    handlers: [console]
+    handlers: [console{% if 'statsd' in options %},statsd{% endif %}]
     propagate: no
     level: INFO
 
